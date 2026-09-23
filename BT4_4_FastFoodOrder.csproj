@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -7,5 +7,17 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="FastFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FastFoodForm.Designer.cs">
+      <DependentUpon>FastFoodForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="FastFoodForm.resx">
+      <DependentUpon>FastFoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
