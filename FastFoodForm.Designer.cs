@@ -6,110 +6,152 @@ namespace BT4_4_FastFoodOrder
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) components.Dispose();
+            if (disposing && (components != null))
+                components.Dispose();
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            lblTitle    = new System.Windows.Forms.Label();
-            grpMenu     = new System.Windows.Forms.GroupBox();
-            lstMenu     = new System.Windows.Forms.ListBox();
-            grpSelected = new System.Windows.Forms.GroupBox();
-            lstSelected = new System.Windows.Forms.ListBox();
-            btnAdd      = new System.Windows.Forms.Button();
-            btnRemove   = new System.Windows.Forms.Button();
-            lblTotal    = new System.Windows.Forms.Label();
-            btnOrder    = new System.Windows.Forms.Button();
-
-            grpMenu.SuspendLayout();
-            grpSelected.SuspendLayout();
-            SuspendLayout();
-
-            // Form
-            Text          = "Đặt Hàng Fast Food";
-            Size          = new System.Drawing.Size(620, 420);
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            MaximizeBox   = false;
-
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.grpMenu = new System.Windows.Forms.GroupBox();
+            this.lstMenu = new System.Windows.Forms.ListBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.grpSelected = new System.Windows.Forms.GroupBox();
+            this.lstSelected = new System.Windows.Forms.ListBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.grpMenu.SuspendLayout();
+            this.grpSelected.SuspendLayout();
+            this.SuspendLayout();
+            // 
             // lblTitle
-            lblTitle.Text      = "🍔  FAST FOOD ORDER  🍕";
-            lblTitle.Font      = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            lblTitle.Location  = new System.Drawing.Point(100, 12);
-            lblTitle.Size      = new System.Drawing.Size(400, 32);
-
-            // grpMenu - danh sách menu
-            grpMenu.Text     = "Thực Đơn";
-            grpMenu.Location = new System.Drawing.Point(20, 55);
-            grpMenu.Size     = new System.Drawing.Size(200, 280);
-
-            lstMenu.Location = new System.Drawing.Point(10, 25);
-            lstMenu.Size     = new System.Drawing.Size(180, 240);
-            lstMenu.Font     = new System.Drawing.Font("Segoe UI", 11F);
-            grpMenu.Controls.Add(lstMenu);
-
-            // Nút > và <
-            btnAdd.Text      = ">";
-            btnAdd.Location  = new System.Drawing.Point(230, 130);
-            btnAdd.Size      = new System.Drawing.Size(50, 40);
-            btnAdd.Font      = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            btnAdd.BackColor = System.Drawing.Color.FromArgb(0, 150, 100);
-            btnAdd.ForeColor = System.Drawing.Color.White;
-            btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnAdd.Click    += btnAdd_Click;
-
-            btnRemove.Text      = "<";
-            btnRemove.Location  = new System.Drawing.Point(230, 185);
-            btnRemove.Size      = new System.Drawing.Size(50, 40);
-            btnRemove.Font      = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            btnRemove.BackColor = System.Drawing.Color.FromArgb(200, 60, 60);
-            btnRemove.ForeColor = System.Drawing.Color.White;
-            btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnRemove.Click    += btnRemove_Click;
-
-            // grpSelected - danh sách đã chọn
-            grpSelected.Text     = "Món Đã Chọn";
-            grpSelected.Location = new System.Drawing.Point(295, 55);
-            grpSelected.Size     = new System.Drawing.Size(300, 280);
-
-            lstSelected.Location = new System.Drawing.Point(10, 25);
-            lstSelected.Size     = new System.Drawing.Size(280, 240);
-            lstSelected.Font     = new System.Drawing.Font("Segoe UI", 11F);
-            grpSelected.Controls.Add(lstSelected);
-
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(100, 12);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(400, 32);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "FAST FOOD ORDER";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // grpMenu
+            // 
+            this.grpMenu.Controls.Add(this.lstMenu);
+            this.grpMenu.Location = new System.Drawing.Point(20, 55);
+            this.grpMenu.Name = "grpMenu";
+            this.grpMenu.Size = new System.Drawing.Size(200, 280);
+            this.grpMenu.TabIndex = 1;
+            this.grpMenu.TabStop = false;
+            this.grpMenu.Text = "Thực Đơn";
+            // 
+            // lstMenu
+            // 
+            this.lstMenu.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lstMenu.Location = new System.Drawing.Point(10, 25);
+            this.lstMenu.Name = "lstMenu";
+            this.lstMenu.Size = new System.Drawing.Size(180, 242);
+            this.lstMenu.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(0, 150, 100);
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(230, 130);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(55, 40);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = ">";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(200, 60, 60);
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(230, 185);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(55, 40);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "<";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // grpSelected
+            // 
+            this.grpSelected.Controls.Add(this.lstSelected);
+            this.grpSelected.Location = new System.Drawing.Point(295, 55);
+            this.grpSelected.Name = "grpSelected";
+            this.grpSelected.Size = new System.Drawing.Size(300, 280);
+            this.grpSelected.TabIndex = 4;
+            this.grpSelected.TabStop = false;
+            this.grpSelected.Text = "Món Đã Chọn";
+            // 
+            // lstSelected
+            // 
+            this.lstSelected.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lstSelected.Location = new System.Drawing.Point(10, 25);
+            this.lstSelected.Name = "lstSelected";
+            this.lstSelected.Size = new System.Drawing.Size(280, 242);
+            this.lstSelected.TabIndex = 0;
+            // 
             // lblTotal
-            lblTotal.Text      = "Tổng tiền: 0 VNĐ";
-            lblTotal.Font      = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            lblTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            lblTotal.Location  = new System.Drawing.Point(20, 350);
-            lblTotal.Size      = new System.Drawing.Size(300, 28);
-
+            // 
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTotal.Location = new System.Drawing.Point(20, 350);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(300, 28);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = "Tổng tiền: 0 VNĐ";
+            // 
             // btnOrder
-            btnOrder.Text      = "🛒  Đặt Hàng";
-            btnOrder.Location  = new System.Drawing.Point(430, 345);
-            btnOrder.Size      = new System.Drawing.Size(160, 35);
-            btnOrder.Font      = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            btnOrder.BackColor = System.Drawing.Color.FromArgb(0, 120, 215);
-            btnOrder.ForeColor = System.Drawing.Color.White;
-            btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnOrder.Click    += btnOrder_Click;
-
-            grpMenu.ResumeLayout(false);
-            grpSelected.ResumeLayout(false);
-
-            Controls.AddRange(new System.Windows.Forms.Control[] {
-                lblTitle, grpMenu, btnAdd, btnRemove,
-                grpSelected, lblTotal, btnOrder
-            });
-
-            ResumeLayout(false);
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(430, 345);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(160, 35);
+            this.btnOrder.TabIndex = 6;
+            this.btnOrder.Text = "Đặt Hàng";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // FastFoodForm
+            // 
+            this.ClientSize = new System.Drawing.Size(620, 400);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.grpMenu);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.grpSelected);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.btnOrder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "FastFoodForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đặt Hàng Fast Food";
+            this.grpMenu.ResumeLayout(false);
+            this.grpSelected.ResumeLayout(false);
+            this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Label    lblTitle, lblTotal;
-        private System.Windows.Forms.GroupBox grpMenu, grpSelected;
-        private System.Windows.Forms.ListBox  lstMenu, lstSelected;
-        private System.Windows.Forms.Button   btnAdd, btnRemove, btnOrder;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.GroupBox grpMenu;
+        private System.Windows.Forms.ListBox lstMenu;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.GroupBox grpSelected;
+        private System.Windows.Forms.ListBox lstSelected;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnOrder;
     }
 }
